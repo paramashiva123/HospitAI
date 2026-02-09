@@ -1,0 +1,39 @@
+[project]
+name = "rag_crew"
+version = "0.1.0"
+description = "rag_crew using crewAI"
+authors = [{ name = "kambala paramashiva", email = "you@example.com" }]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "apscheduler>=3.11.2",
+    "crewai[tools]==1.9.3",
+    "fastapi>=0.128.0",
+    "fastapi-sso>=0.20.0",
+    "langchain-chroma>=1.0.0",
+    "langchain-community>=0.4.1",
+    "langchain-core>=1.2.8",
+    "langchain-groq>=1.1.2",
+    "langchain-huggingface>=1.2.0",
+    "langchain-milvus>=0.3.3",
+    "litellm<1.80",
+    "pydantic[email]>=2.11.10",
+    "pymilvus>=2.6.8",
+    "pypdf>=6.6.2",
+    "sentence-transformers>=5.2.2",
+    "streamlit>=1.54.0",
+]
+
+[project.scripts]
+rag_crew = "rag_crew.main:run"
+run_crew = "rag_crew.main:run"
+train = "rag_crew.main:train"
+replay = "rag_crew.main:replay"
+test = "rag_crew.main:test"
+run_with_trigger = "rag_crew.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

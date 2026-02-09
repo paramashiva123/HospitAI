@@ -1,0 +1,9 @@
+answerer_task:
+  description: >
+    Question: {query}
+
+    Use the retrieved_context tool to fetch relevant information.
+    Answer ONLY using retrieved context.
+  expected_output: >
+     A grounded, factual answer supported by the documents.
+  agent: answerer
